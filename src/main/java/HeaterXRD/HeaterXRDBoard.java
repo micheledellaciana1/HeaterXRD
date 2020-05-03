@@ -24,6 +24,7 @@ public class HeaterXRDBoard extends ChartFrame {
 
     private HeaterXRDBoard(ChartPanel panel, String Title) {
         super(panel, Title);
+
         _Commands = SimCommands.getInstance();
         _TM = new TaskManager("TaskManagerHeaterXRD");
         _heater = new ModeHeater("Heater", 10, _Commands);

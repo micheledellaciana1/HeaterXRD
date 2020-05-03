@@ -104,6 +104,8 @@ public class MenuEditorXRDHeater extends MenuEditorSingleSensorBoard {
             }
         });
 
+        menu.add(BuildDuplicateView());
+
         return menu;
     }
 
