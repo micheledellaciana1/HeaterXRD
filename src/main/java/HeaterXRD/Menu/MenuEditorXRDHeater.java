@@ -33,7 +33,7 @@ public class MenuEditorXRDHeater extends MenuEditorSingleSensorBoard {
     private JMenu BuildFileMenu() {
         JMenu menu = new JMenu("File");
         menu.add(BuildChartPropertyMenu());
-        menu.add(BuildExportTXT());
+        menu.add(BuildExportMenu());
 
         menu.add(new AbstractAction("Reset") {
 

@@ -5,12 +5,6 @@ import SingleSensorBoard.Commands.ICommands;
 public class CommandsHeaterXRD implements ICommands {
 
     @Override
-    public void initCommands() {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
     public void SetVoltageFall(double value) {
         // TODO Auto-generated method stub
 
@@ -136,4 +130,15 @@ public class CommandsHeaterXRD implements ICommands {
 
     }
 
+    @Override
+    public void closeDevice() {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public long getAverangeTimeADC() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 }

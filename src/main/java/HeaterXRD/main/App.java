@@ -21,8 +21,7 @@ public class App {
         app.displayTemperatureVsTime();
         app.setVisible(true);
 
-        Thread ChartUpdaterThread = new Thread(app.getUpdaterChart(10));
-        ChartUpdaterThread.start();
+        app.startUpdaterThread();
 
         Thread t1 = new Thread(Manager);
         t1.start();
