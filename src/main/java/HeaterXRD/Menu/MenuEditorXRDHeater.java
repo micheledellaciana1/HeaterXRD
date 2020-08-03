@@ -7,8 +7,9 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 
-import HeaterXRD.HeaterXRDBoard;
-import SingleSensorBoard.Commands.ICommands;
+import HeaterXRD.ICAROBoard;
+import SingleSensorBoard.ModeHeater;
+import SingleSensorBoard.Commands.ASingleBoardCommands;
 import SingleSensorBoard.Menu.MenuEditorSingleSensorBoard;
 import core.ATask;
 import core.ChartFrame;
@@ -17,7 +18,7 @@ import core.TaskManager;
 
 public class MenuEditorXRDHeater extends MenuEditorSingleSensorBoard {
 
-    public MenuEditorXRDHeater(TaskManager TM, ICommands commands, ChartFrame chart) {
+    public MenuEditorXRDHeater(TaskManager TM, ASingleBoardCommands commands, ChartFrame chart) {
         super(TM, commands, chart);
     }
 
@@ -50,7 +51,7 @@ public class MenuEditorXRDHeater extends MenuEditorSingleSensorBoard {
                             switch (answer) {
                                 case 0:
                                     LoopManager.startingTime = System.currentTimeMillis();
-                                    HeaterXRDBoard.getInstance().ResetUI();
+                                    ICAROBoard.getInstance().ResetUI();
                                     _commands.ResetDevice();
                                     break;
                                 case 1:
@@ -72,7 +73,51 @@ public class MenuEditorXRDHeater extends MenuEditorSingleSensorBoard {
 
     private JMenu BuildSetMenu() {
         JMenu menu = new JMenu("Set");
-        menu.add(BuildSetMenuHeater(HeaterXRDBoard.getHeater()));
+        menu.add(BuildSetMenuHeater(ICAROBoard.getHeater()));
+        return menu;
+    }
+
+    @Override
+    protected JMenu BuildSetMenuHeater(final ModeHeater heater) {
+        JMenu menu = new JMenu("Heater");
+        menu.add(new AbstractAction("Temperature") {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String answer = JOptionPane.showInputDialog("Set Temperature");
+                try {
+                    heater.getFeedBackController().set_target_value(Double.valueOf(answer));
+                } catch (Exception _e) {
+                    if (verbose) {
+                        JOptionPane.showMessageDialog(null, _e.toString(), "ERROR", JOptionPane.ERROR_MESSAGE);
+                        _e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+        menu.add(new AbstractAction("Voltage") {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                final String answer = JOptionPane.showInputDialog("Set Voltage");
+                _TM.addTask(new ATask() {
+                    @Override
+                    public void execution() {
+                        try {
+                            _commands.SetVoltageHeater(Double.valueOf(answer));
+                        } catch (Exception _e) {
+                            if (verbose) {
+                                JOptionPane.showMessageDialog(null, _e.toString(), "ERROR", JOptionPane.ERROR_MESSAGE);
+                                _e.printStackTrace();
+                            }
+                        }
+                    }
+                });
+            }
+        });
+
+        menu.add(BuildFeedbackMenu(heater));
+        // menu.add(BuildCalibrationHeaterMenu(heater));
+
         return menu;
     }
 
@@ -84,7 +129,7 @@ public class MenuEditorXRDHeater extends MenuEditorSingleSensorBoard {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                HeaterXRDBoard.getInstance().displayTemperatureVsTime();
+                ICAROBoard.getInstance().displayTemperatureVsTime();
             }
         });
 
@@ -92,15 +137,15 @@ public class MenuEditorXRDHeater extends MenuEditorSingleSensorBoard {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                HeaterXRDBoard.getInstance().displayResistanceHeaterVsTime();
+                ICAROBoard.getInstance().displayResistanceHeaterVsTime();
             }
         });
 
-        menu.add(new AbstractAction("Power") {
+        menu.add(new AbstractAction("Voltage") {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                HeaterXRDBoard.getInstance().displayPowerVsTime();
+                ICAROBoard.getInstance().displayVoltageHeaterVsTime();
             }
         });
 
@@ -115,14 +160,21 @@ public class MenuEditorXRDHeater extends MenuEditorSingleSensorBoard {
         menu.add(new AbstractAction("Temperature") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                HeaterXRDBoard.getInstance().displayChambertTemperature();
+                ICAROBoard.getInstance().displayChambertTemperature();
             }
         });
 
         menu.add(new AbstractAction("Humidity") {
             @Override
             public void actionPerformed(ActionEvent e) {
-                HeaterXRDBoard.getInstance().displayChamberHumidity();
+                ICAROBoard.getInstance().displayChamberHumidity();
+            }
+        });
+
+        menu.add(new AbstractAction("Temperature Controller") {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ICAROBoard.getInstance().displayTemperatureController();
             }
         });
 
