@@ -43,7 +43,7 @@ If everything is working properly, it will appear the main window of the
 program, that shows the temperature of the sample in real time.
 
 ![Start view: when the program starts it displays the temperature of the
-sample holder](figures/MainWindow.PNG){width="0.4\\linewidth"}
+sample holder](figures/MainWindow.PNG=100}
 
 Data display and data navigation
 ================================
