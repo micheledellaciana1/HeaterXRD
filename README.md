@@ -1,9 +1,8 @@
 
-#   ICARO GUI -- Quick start Guide\
+#   ICARO GUI -- Quick start Guide
+  v.1 2020-08
 
-v.1 2020-08
-
----
+--
 abstract: |
   ICARO is a program that drives a temperature controller. Actually it's
   implemented in two systems: an environmental chamber for temperatures
@@ -11,7 +10,7 @@ abstract: |
   operando measurements on an XRD (X-Ray diffraction) instrumentation.
 author:
 - Michele Della Ciana
----
+--
 
 ![image](figures/Chamber3D_2020-Aug-25_10-49-30AM-000_CustomizedView10613288093_png.png)
 
