@@ -50,7 +50,7 @@ public class ICAROBoard extends ChartFrame {
 
         _heater.setLUT(PT100.instance);
         _heater.getFeedBackController().setParameters(0, 0.015);
-        _heater.getFeedBackController().setParameters(1, 0.00006);
+        _heater.getFeedBackController().setParameters(1, 0.0006);
         _heater.getFeedBackController().setParameters(2, 0.);
         _heater.getFeedBackController().setParameters(3, 0.5);
 
