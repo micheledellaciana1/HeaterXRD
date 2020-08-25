@@ -1,6 +1,7 @@
-# Data display and data navigation
-  v.1 2020-08
- Michele Della Ciana
+# ICARO GUI – Quick start Guide
+
+ ###### v.1 2020-08
+ ###### Michele Della Ciana
 
 Abstract
 ========
