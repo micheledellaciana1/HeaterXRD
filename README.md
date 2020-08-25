@@ -43,13 +43,13 @@ If everything is working properly, it will appear the main window of the
 program, that shows the temperature of the sample in real time.
 
 ![Start view: when the program starts it displays the temperature of the
-sample holder](figures/MainWindow.PNG=100}
+sample holder](figures/MainWindow.PNG =100x}
 
 Data display and data navigation
 ================================
 
 ![Display menú: from the display menú you can select the data to
-monitor](figures/DisplayMenu.png =100}
+monitor](figures/DisplayMenu.png =100x}
 
 During a run, ICARO works as a data logger. Every windows display a set
 of data in real time. ICARO collects the temperature of the sample, the
@@ -88,7 +88,7 @@ Set Menú
 ========
 
 ![Set menú: from the set menú you set the temperature or the voltage of
-the heater](figures/SetMenu.png =100}
+the heater](figures/SetMenu.png =100x}
 
 The *Set* menú contains the commands to manage the power provided to the
 heater. It can work in manual or in automatic mode. As the programs
@@ -114,7 +114,7 @@ responce while the feedback approces the target temperature.
 File Menú
 =========
 
-![File menú](figures/FileMenu.png =100}
+![File menú](figures/FileMenu.png =100x}
 
 The *File* menu manages the export of the data and some general
 properties of the chart. Data can be exported as an image (.PNG) or as a
