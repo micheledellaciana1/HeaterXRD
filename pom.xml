@@ -4,11 +4,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>core.HeaterXRD.HeaterXRD</groupId>
-  <artifactId>HeaterXRD</artifactId>
+  <groupId>com.MagicMike.ICARO</groupId>
+  <artifactId>ICARO</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>HeaterXRD</name>
+  <name>ICARO</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -46,7 +46,7 @@
             </descriptorRefs>
             <archive>
               <manifest>
-                <mainClass>HeaterXRD.main.App</mainClass>
+                <mainClass>ICAROGUI.main.App</mainClass>
               </manifest>
             </archive>
           </configuration>

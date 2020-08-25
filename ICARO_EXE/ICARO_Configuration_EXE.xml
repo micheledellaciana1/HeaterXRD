@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\utente\Documents\MvnProjct\MvnProject\IcaroGUI\target\ICARO-1.0-SNAPSHOT-jar-with-dependencies.jar</jar>
+  <outfile>C:\Users\utente\Desktop\ICARO.exe</outfile>
+  <errTitle>ICARO needs java, so you need to install it</errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\utente\Downloads\GHS-pictogram-flamme.ico</icon>
+  <classPath>
+    <mainClass>ICAROGUI.main.App</mainClass>
+  </classPath>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>8</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>1</txtFileVersion>
+    <fileDescription>ICARO app</fileDescription>
+    <copyright>-</copyright>
+    <productVersion>1.0.0.0</productVersion>
+    <txtProductVersion>1</txtProductVersion>
+    <productName>ICARO app</productName>
+    <companyName>MagicMike</companyName>
+    <internalName>ICAROgui</internalName>
+    <originalFilename>ICAROgui.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>
