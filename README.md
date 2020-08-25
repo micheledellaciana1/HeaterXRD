@@ -11,7 +11,7 @@ title: |
   v.1 2020-08
 ---
 
-![image](Chamber3D_2020-Aug-25_10-49-30AM-000_CustomizedView10613288093_png.png){width="0.7\\linewidth"}
+![image](figures/Chamber3D_2020-Aug-25_10-49-30AM-000_CustomizedView10613288093_png.png){width="0.7\\linewidth"}
 
 Install ICARO
 =============
