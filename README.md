@@ -11,7 +11,7 @@ title: |
   v.1 2020-08
 ---
 
-![image](figures/Chamber3D_2020-Aug-25_10-49-30AM-000_CustomizedView10613288093_png.png)
+![image](figures/Chamber3D_2020-Aug-25_10-49-30AM-000_CustomizedView10613288093_png.png){width="0.7\\linewidth"}
 
 Install ICARO
 =============
@@ -43,13 +43,13 @@ If everything is working properly, it will appear the main window of the
 program, that shows the temperature of the sample in real time.
 
 ![Start view: when the program starts it displays the temperature of the
-sample holder](figures/MainWindow.png}
+sample holder](figures/MainWindow.PNG){width="0.4\\linewidth"}
 
 Data display and data navigation
 ================================
 
 ![Display menú: from the display menú you can select the data to
-monitor](figures/DisplayMenu.png}
+monitor](figures/DisplayMenu.png){width="0.4\\linewidth"}
 
 During a run, ICARO works as a data logger. Every windows display a set
 of data in real time. ICARO collects the temperature of the sample, the
@@ -88,7 +88,7 @@ Set Menú
 ========
 
 ![Set menú: from the set menú you set the temperature or the voltage of
-the heater](figures/SetMenu.png}
+the heater](figures/SetMenu.png){width="0.4\\linewidth"}
 
 The *Set* menú contains the commands to manage the power provided to the
 heater. It can work in manual or in automatic mode. As the programs
@@ -114,7 +114,7 @@ responce while the feedback approces the target temperature.
 File Menú
 =========
 
-![File menú](figures/FileMenu.png}
+![File menú](figures/FileMenu.png){width="0.4\\linewidth"}
 
 The *File* menu manages the export of the data and some general
 properties of the chart. Data can be exported as an image (.PNG) or as a
