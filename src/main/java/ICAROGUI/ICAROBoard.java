@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 import ICAROGUI.Commands.ICAROCommands;
 import ICAROGUI.Menu.MenuEditorICARO;
-import ICAROGUI.ThermistorLUT.NTC_100K;
+
 import ICAROGUI.ThermistorLUT.PT100;
 import SingleSensorBoard.ModeChamberHumidity;
 import SingleSensorBoard.ModeChamberTemperature;
@@ -99,6 +99,8 @@ public class ICAROBoard extends ChartFrame {
     public void displayTemperatureVsTime() {
         clearData();
         addSeries(_heater.getTemperature(), "Temperature");
+        addSeries(_heater.getTargetTemperature(), "TargetTemperature");
+
         _panel.getChart().getXYPlot().getDomainAxis().setLabel("Time [S]");
         _panel.getChart().getXYPlot().getRangeAxis().setLabel("Temperature [°C]");
     }

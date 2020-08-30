@@ -3,7 +3,7 @@
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
   <jar>C:\Users\utente\Documents\MvnProjct\MvnProject\IcaroGUI\target\ICARO-1.0-SNAPSHOT-jar-with-dependencies.jar</jar>
-  <outfile>C:\Users\utente\Desktop\ICARO.exe</outfile>
+  <outfile>C:\Users\utente\Documents\MvnProjct\MvnProject\IcaroGUI\ICARO_EXE\ICARO.exe</outfile>
   <errTitle>ICARO needs java, so you need to install it</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
@@ -13,7 +13,7 @@
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>C:\Users\utente\Downloads\GHS-pictogram-flamme.ico</icon>
+  <icon>C:\Users\utente\Documents\MvnProjct\MvnProject\IcaroGUI\ICARO_EXE\ICARO_ICON.ico</icon>
   <classPath>
     <mainClass>ICAROGUI.main.App</mainClass>
   </classPath>

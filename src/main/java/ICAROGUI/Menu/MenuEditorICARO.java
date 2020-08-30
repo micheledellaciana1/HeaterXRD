@@ -29,6 +29,7 @@ public class MenuEditorICARO extends MenuEditorSingleSensorBoard {
         super(chart, HCommands, null, THumidityCommands, null, TM);
         _TempControllerCommands = TCCommands;
         _ICAROCommands = iCommands;
+        verbose = false;
     }
 
     @Override

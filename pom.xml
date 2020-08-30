@@ -21,8 +21,8 @@
   <dependencies>
 
     <dependency>
-      <groupId>com.MagicMike.SingleSensorBoard</groupId>
-      <artifactId>SingleSensorBoard</artifactId>
+      <groupId>com.MagicMike.SingleSensorBoard_V2</groupId>
+      <artifactId>SingleSensorBoard_V2</artifactId>
       <version>1.0</version>
     </dependency>
 
