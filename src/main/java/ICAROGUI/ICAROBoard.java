@@ -49,10 +49,11 @@ public class ICAROBoard extends ChartFrame {
         _heater.NAverange = 1;
 
         _heater.setLUT(PT100.instance);
-        _heater.getFeedBackController().setParameters(0, 0.015);
-        _heater.getFeedBackController().setParameters(1, 0.0006);
-        _heater.getFeedBackController().setParameters(2, 0.);
-        _heater.getFeedBackController().setParameters(3, 0.5);
+        _heater.getFeedBackController().setParameters(0, 0.25);
+        _heater.getFeedBackController().setParameters(1, 0.005);
+        _heater.getFeedBackController().setParameters(2, 1.5);
+        _heater.getFeedBackController().setParameters(3, 1);
+        _heater.checkTimeFeedback = 500;
 
         _ChamberHumidity = new ModeChamberHumidity(_commands.getTempHumidityCommands(), "ChamberHumidity", 100);
         _ChamberTemperature = new ModeChamberTemperature(_commands.getTempHumidityCommands(), "ChamberTemperature",
