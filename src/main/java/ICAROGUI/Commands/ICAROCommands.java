@@ -59,6 +59,10 @@ public class ICAROCommands extends ACommands {
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, e.toString(), "ERROR", JOptionPane.ERROR_MESSAGE);
                     e.printStackTrace();
+                    _serial = null;
+                    _HeaterCommands = new HeaterCommands(_serial);
+                    _TempHumidityCommands = new TempHumidityCommands(_serial);
+                    _TempControllerCommands = new TempControllerCommands(_serial);
                     return;
                 }
             }
