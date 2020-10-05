@@ -9,7 +9,7 @@ import core.themal.LookUpTable;
  */
 public class PT100 {
 
-    static public LookUpTable instance = calcolateLUT(-50, 1500, 3.9083e-3, -5.775e-7);
+    static public LookUpTable instance = calcolateLUT(-273.15, 1500, 3.9083e-3, -5.775e-7);
 
     private PT100() {
     }

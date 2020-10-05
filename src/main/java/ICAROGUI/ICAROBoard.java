@@ -37,6 +37,12 @@ public class ICAROBoard extends ChartFrame {
                     public void execution() {
                         ResetUI();
                         _commands.closeDevice();
+                        try {
+                            Thread.sleep(200);
+                        } catch (InterruptedException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
                         System.exit(0);
                     }
                 });
@@ -45,14 +51,14 @@ public class ICAROBoard extends ChartFrame {
 
         _commands = new ICAROCommands();
         _TM = new TaskManager("TaskManagerICARO");
-        _heater = new ModeHeater("Heater", 10, _commands.getHeaterCommands());
-        _heater.NAverange = 1;
+        _heater = new ModeHeater("Heater", 1, _commands.getHeaterCommands());
 
         _heater.setLUT(PT100.instance);
         _heater.getFeedBackController().setParameters(0, 0.25);
         _heater.getFeedBackController().setParameters(1, 0.005);
-        _heater.getFeedBackController().setParameters(2, 1.5);
+        _heater.getFeedBackController().setParameters(2, 10);
         _heater.getFeedBackController().setParameters(3, 1);
+        _heater.getFeedBackController().MaxResponce = 23;
         _heater.checkTimeFeedback = 500;
 
         _ChamberHumidity = new ModeChamberHumidity(_commands.getTempHumidityCommands(), "ChamberHumidity", 100);
